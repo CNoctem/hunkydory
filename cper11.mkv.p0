@@ -1,0 +1,11 @@
+files=(*)
+total=${#files[@]}
+i=0
+for f in "${files[@]}"; do
+    i=$(( i + 1 ))
+    echo index $i
+    echo total $total
+    echo "- Processing file: $f"
+    mv $f cper$i.mkv
+
+done
